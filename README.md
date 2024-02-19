@@ -1,30 +1,28 @@
-# React + TypeScript + Vite
+# Project setup
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+It is easy to setup the project and run it, all you have is to run these two commands:
 
-Currently, two official plugins are available:
+- `yarn install` or `yarn` for short, to install all dependencies
+- `yarn dev` to run the app on your local environment
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+# Questions
 
-## Expanding the ESLint configuration
+## Figma
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- How should the elemens of the UI behave upon user interaction ? (hover, focus, click...)
+- Is the card clickable ? and is it different that the click on the plus button ?
+- How should the UI display on different viewport sizes ? (responsive)
+- If the name of the card is more than two lines, how should it be displayed ?
 
-- Configure the top-level `parserOptions` property like this:
+## Data
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
+- There is no need in nesting thumnail information. With such a simple use-case, it could have been simpler to have all data at the same level.
+
+```
+{
+  id
+  name
+  alt
+  url
 }
 ```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
